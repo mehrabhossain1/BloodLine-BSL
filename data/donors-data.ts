@@ -6,6 +6,7 @@ export interface Donor {
   id: string;
   fullName: string;
   bloodGroup: BloodType;
+  gender: "Male" | "Female";
   location: string;
   contact: string;
   lastDonated: string;
@@ -16,24 +17,27 @@ export const donors: Donor[] = [
     id: nanoid(),
     fullName: "John Doe",
     bloodGroup: "A+",
-    location: "Kathmandu",
-    contact: "1234567890",
-    lastDonated: "2023-01-01",
+    gender: "Male",
+    location: "New York, USA",
+    contact: "+1 123-456-7890",
+    lastDonated: "2022-01-01",
   },
   {
     id: nanoid(),
     fullName: "Jane Doe",
     bloodGroup: "B+",
-    location: "Kathmandu",
-    contact: "1234567890",
-    lastDonated: "2023-01-01",
+    gender: "Female",
+    location: "London, UK",
+    contact: "+44 123-456-7890",
+    lastDonated: "2022-02-01",
   },
   {
     id: nanoid(),
-    fullName: "John Doe",
-    bloodGroup: "A+",
-    location: "Kathmandu",
-    contact: "1234567890",
-    lastDonated: "2023-01-01",
+    fullName: "Jane Doe",
+    bloodGroup: "B+",
+    gender: "Female",
+    location: "London, UK",
+    contact: "+44 123-456-7890",
+    lastDonated: "2022-02-01",
   },
 ];
