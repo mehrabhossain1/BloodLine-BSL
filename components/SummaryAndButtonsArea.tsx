@@ -6,6 +6,7 @@ import { List, LayoutGrid } from "lucide-react";
 
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group";
 import { GenderDropDown } from "./drop-downs/genderDropDown";
+import { GroupsDropDown } from "./drop-downs/groupsDropDown";
 
 function SummaryAndButtonsArea() {
   return (
@@ -25,6 +26,7 @@ function SummaryAndButtonsArea() {
         {/* Status badge */}
 
         <GenderDropDown />
+        <GroupsDropDown />
       </div>
     </div>
   );
