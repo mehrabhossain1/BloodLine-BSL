@@ -7,6 +7,7 @@ import StatisticsCards from "@/components/StatisticsCards";
 import SummaryAndButtonsArea from "@/components/SummaryAndButtonsArea";
 import useDonorDataStore from "@/hooks/useDonorDataStore";
 import { useEffect } from "react";
+import FilterArea from "@/components/FilterArea";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -23,6 +24,7 @@ export default function Home() {
       <Navbar />
       <StatisticsCards />
       <SummaryAndButtonsArea />
+      <FilterArea />
     </div>
   );
 }
