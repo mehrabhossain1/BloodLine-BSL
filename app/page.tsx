@@ -11,6 +11,7 @@ import FilterArea from "@/components/FilterArea";
 import { useDonorViewStore } from "@/hooks/useDonorViewStore";
 import DonorsTable from "@/components/donors-table/DonorsTable";
 import DonorsCardArea from "@/components/donors-cards-area/DonorsCardArea";
+import { donors } from "@/data/donors-data";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -25,7 +26,7 @@ export default function Home() {
 
   function RenderCurrentView() {
     if (currentView === "list") {
-      return <DonorsTable />;
+      return <DonorsTable donors={donors} />;
     } else {
       return <DonorsCardArea />;
     }
