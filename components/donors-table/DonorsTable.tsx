@@ -54,6 +54,7 @@ function SkeletonTable() {
                 "Location",
                 "Contact",
                 "Last Donated",
+                "isAvailable",
                 "Actions",
               ].map((header, idx) => (
                 <th key={idx} className="p-3 text-left">

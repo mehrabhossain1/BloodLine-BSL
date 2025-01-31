@@ -28,7 +28,7 @@ export default function Home() {
     if (currentView === "list") {
       return <DonorsTable donors={donors} />;
     } else {
-      return <DonorsCardArea />;
+      return <DonorsCardArea donors={donors} />;
     }
   }
 

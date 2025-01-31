@@ -4,7 +4,8 @@ import { Badge } from "../ui/badge";
 import { Checkbox } from "../ui/checkbox";
 import { ColumnDef } from "@tanstack/react-table";
 
-import { PersonStanding } from "lucide-react";
+import { FaMale } from "react-icons/fa";
+import { FaFemale } from "react-icons/fa";
 
 import { CheckedState } from "@radix-ui/react-checkbox";
 import { Donor } from "@/data/donors-data";
@@ -48,9 +49,9 @@ export const columns: ColumnDef<Donor>[] = [
       // based on the gender store the icon
       const genderIcon =
         gender === "Male" ? (
-          <PersonStanding className="text-lg text-primary" />
+          <FaMale className="text-lg text-primary" />
         ) : (
-          <PersonStanding className="text-lg text-secondary" />
+          <FaFemale className="text-lg text-primary" />
         );
 
       //
@@ -95,6 +96,27 @@ export const columns: ColumnDef<Donor>[] = [
   {
     header: "Last Donated",
     accessorKey: "lastDonated",
+  },
+
+  {
+    header: "Is Available",
+    accessorKey: "isAvailable",
+
+    cell: ({ row }) => {
+      const isAvailable = row.getValue("isAvailable");
+
+      return (
+        <Badge
+          className={`font-medium shadow-none ${
+            isAvailable
+              ? "bg-green-500/15 text-green-500 hover:bg-green-500 hover:text-white"
+              : "bg-red-500/15 text-red-500 hover:bg-red-500 hover:text-white"
+          }`}
+        >
+          {isAvailable ? "Yes" : "No"}
+        </Badge>
+      );
+    },
   },
 
   {

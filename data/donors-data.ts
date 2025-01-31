@@ -10,6 +10,7 @@ export interface Donor {
   location: string;
   contact: string;
   lastDonated: string;
+  isAvailable: boolean;
 }
 
 export const donors: Donor[] = [
@@ -21,6 +22,7 @@ export const donors: Donor[] = [
     location: "New York, USA",
     contact: "+1 123-456-7890",
     lastDonated: "2022-01-01",
+    isAvailable: true,
   },
   {
     id: nanoid(),
@@ -30,6 +32,7 @@ export const donors: Donor[] = [
     location: "London, UK",
     contact: "+44 123-456-7890",
     lastDonated: "2022-02-01",
+    isAvailable: true,
   },
   {
     id: nanoid(),
@@ -39,5 +42,6 @@ export const donors: Donor[] = [
     location: "London, UK",
     contact: "+44 123-456-7890",
     lastDonated: "2022-02-01",
+    isAvailable: false,
   },
 ];
