@@ -10,6 +10,7 @@ import { Skeleton } from "../ui/skeleton";
 import { Donor } from "@/data/donors-data";
 import { columns } from "./donor-columns";
 import { DataTable } from "./data-table";
+import PaginationArea from "./pagination-area";
 
 export type PaginationType = {
   pageIndex: number;
@@ -35,6 +36,7 @@ export default function DonorTable({ donors }: { donors: Donor[] | null }) {
   return (
     <div className="px-6 mt-10">
       <DataTable columns={columns} table={table} />
+      <PaginationArea />
     </div>
   );
 }
